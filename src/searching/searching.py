@@ -15,10 +15,10 @@ def binary_search(arr, target, start, end):
         return len(arr)-1
     elif target > arr[midpoint]:
         # print(arr[midpoint:])
-        binary_search(arr[midpoint:], target, start, len(arr[midpoint:]))
+        binary_search(arr[midpoint:], target, start, len(arr[midpoint:]) - 1)
     elif target < arr[midpoint]:
         # print(arr[:midpoint])
-        binary_search(arr[:midpoint], target, start, len(arr[:midpoint]))
+        binary_search(arr[:midpoint], target, start, len(arr[:midpoint])+1)
 
     # if len(arr) == 0:
     #     return -1
